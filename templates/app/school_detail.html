@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Details of all {{DOSI.scname}}</h1>
+        <h1>Name of the school is {{DOSI.scname}}</h1>
+        <h1>Principal of the school is {{DOSI.scprincipal}}</h1>
+        <h1>Locationof the school is {{DOSI.scloc}}</h1>
+
+        <h2>STUDENT INFO  {{DOSI.scname}}</h2>
+        {% for sto in DOSI.minion.all %}
+        <h2>Name of the student is {{sto.sname}}</h2>
+        <h2>age of the student is {{sto.sage}}</h2>
+        <h3>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</h3>
+        {% endfor %}
+
+
+        <a href="{% url 'update' pk=DOSI.pk %}">update</a>
+
+
+
+
+    </center>
+</body>
+</html>
